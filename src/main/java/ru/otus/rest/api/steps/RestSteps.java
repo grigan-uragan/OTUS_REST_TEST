@@ -4,6 +4,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 
 public class RestSteps {
@@ -21,6 +23,12 @@ public class RestSteps {
   }
 
   public ValidatableResponse doGetWithPathParam(RequestSpecification specification, String path, String pathParam) {
-    return null;
+    return specification
+            .basePath(path)
+          .when()
+            .get(pathParam)
+          .then()
+            .log()
+            .all();
   }
 }
