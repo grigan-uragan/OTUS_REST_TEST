@@ -15,4 +15,7 @@ public interface PropertyReader extends Config {
 
   @Key("pet.store.user.path")
   String petStoreUserPath();
+
+  @Key("pet.store.user.create.with.list.path")
+  String createUserWithListPath();
 }
