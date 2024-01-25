@@ -1,0 +1,9 @@
+Шаг 1: Выполнить запрос POST/User c body:
+{
+    "firstName": "John",
+    "id": 1,
+    "lastName": "Doe",
+    "phone": "8(800)555-35-35",
+    "username": "Johny"
+}
+ОР: Вернулся ответ 200 ок.

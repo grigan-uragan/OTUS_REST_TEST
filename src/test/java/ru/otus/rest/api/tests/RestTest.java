@@ -14,6 +14,10 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+/**
+  Тесткейсы лежат по пути src/test/resources/testcase
+ */
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class RestTest {
   private final PropertyReader propertyReader = ConfigFactory.create(PropertyReader.class);
@@ -53,7 +57,7 @@ public class RestTest {
   }
 
   @Test
-  @Order(4)
+  @Order(3)
   @DisplayName("Создание 2 Юзеров")
   void shouldCreate2Users() {
     RestSteps steps = new RestSteps();
@@ -75,7 +79,7 @@ public class RestTest {
   }
 
   @Test
-  @Order(5)
+  @Order(4)
   @DisplayName("Успешный поиск только созданых 2 пользователя")
   void shouldFind2NewUser() {
     RestSteps steps = new RestSteps();

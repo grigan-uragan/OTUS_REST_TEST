@@ -1,0 +1,14 @@
+Шаг 1: Выполнить запрос POST/User c body:
+[
+    {
+        "firstName": "Tom",
+        "lastName": "Kukuruz",
+        "username": "Tommy"
+    },
+    {
+        "firstName": "Bob",
+        "lastName": "Dilan",
+        "username": "Bobby"
+    }
+]
+ОР: Вернулся ответ 200 ок.

@@ -1,0 +1,22 @@
+Шаг 1: Выполнить запрос GET/User/Tommy :
+
+ОР: Вернулся ответ 200 ок.
+в теле ответа:
+    {
+        "id": 9222968140497199801,
+        "username": "Tommy",
+        "firstName": "Tom",
+        "lastName": "Kukuruz",
+        "userStatus": 0
+    }
+Шаг 2: Выполнить запрос GET/User/Bobby :
+
+ОР: Вернулся ответ 200 ок.
+в теле ответа:
+    {
+        "id": 9222968140497199802,
+        "username": "Bobby",
+        "firstName": "Bob",
+        "lastName": "Dilan",
+        "userStatus": 0
+    }

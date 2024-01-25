@@ -1,0 +1,12 @@
+Шаг 1: Выполнить запрос GET/User/{username} :
+
+ОР: Вернулся ответ 200 ок.
+в теле ответа:
+    {
+         "id": 1,
+         "username": "Johny",
+         "firstName": "John",
+         "lastName": "Doe",
+         "phone": "8(800)555-35-35",
+         "userStatus": 0
+    }
