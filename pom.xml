@@ -16,6 +16,7 @@
     <lombok.version>1.18.22</lombok.version>
     <jackson.version>2.13.0</jackson.version>
     <owner.version>1.0.12</owner.version>
+    <check.style.version>3.1.1</check.style.version>
     <maven.surefire.version>3.0.0-M9</maven.surefire.version>
     <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
   </properties>
@@ -68,6 +69,24 @@
           <target>${maven.compiler.target}</target>
           <showDeprecation>true</showDeprecation>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${check.style.version}</version>
+        <configuration>
+          <includeTestSourceDirectory>true</includeTestSourceDirectory>
+          <configLocation>${project.build.directory}/../src/main/resources/checkstyle.xml</configLocation>
+        </configuration>
+        <executions>
+          <execution>
+            <id>analyze-compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

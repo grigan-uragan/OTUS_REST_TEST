@@ -1,4 +1,6 @@
 package ru.otus.rest.api.tests;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -8,11 +10,7 @@ import org.junit.jupiter.api.*;
 import ru.otus.rest.api.dto.UserDTO;
 import ru.otus.rest.api.helper.PropertyReader;
 import ru.otus.rest.api.steps.RestSteps;
-
 import java.util.List;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
 
 /**
   Тесткейсы лежат по пути src/test/resources/testcase

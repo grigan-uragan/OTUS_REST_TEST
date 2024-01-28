@@ -1,17 +1,15 @@
 package ru.otus.rest.api.steps;
 
+import static io.restassured.RestAssured.given;
+
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
-import java.util.Map;
-
-import static io.restassured.RestAssured.given;
-
 public class RestSteps {
 
-  public RequestSpecification setup(String URI) {
-    return given().baseUri(URI).contentType(ContentType.JSON).log().all();
+  public RequestSpecification setup(String uri) {
+    return given().baseUri(uri).contentType(ContentType.JSON).log().all();
   }
 
   public ValidatableResponse doPostRequest(RequestSpecification specification, String path, Object body) {
@@ -24,11 +22,11 @@ public class RestSteps {
 
   public ValidatableResponse doGetWithPathParam(RequestSpecification specification, String path, String pathParam) {
     return specification
-            .basePath(path)
+          .basePath(path)
           .when()
-            .get(pathParam)
+          .get(pathParam)
           .then()
-            .log()
-            .all();
+          .log()
+          .all();
   }
 }
